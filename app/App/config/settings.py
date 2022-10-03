@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Apps
     'cliente.apps.ClienteConfig',
-    'turno.apps.TurnoConfig'
+    'turno.apps.TurnoConfig',
+    'asistencia.apps.AsistenciaConfig',
+    'pago.apps.PagoConfig',
+    'rutina.apps.RutinaConfig',
 ]
 
 MIDDLEWARE = [
