@@ -1,4 +1,6 @@
 from django.db import models
+
+
 # from App.cliente.models import Cliente
 
 
@@ -11,14 +13,14 @@ class TipoPago(models.Model):
 
 
 class Mes(models.Model):
-    detalle = models.CharField(max_length=20),
+    detalle = models.CharField(max_length=20, default=None)
 
     def __str__(self):
         return self.detalle
 
 
 class Pago(models.Model):
-#    id_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    #    id_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     id_mes = models.ForeignKey(Mes, on_delete=models.CASCADE, default=None)
     id_tipoPago = models.ForeignKey(TipoPago, on_delete=models.CASCADE, default=None)
     fechaYHora = models.DateTimeField(auto_now_add=True, null=True, verbose_name='Fecha y Hora')
